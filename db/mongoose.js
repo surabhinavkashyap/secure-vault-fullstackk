@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://127.0.0.1:27017/task-manager-api')
+const connectDatabase = () => mongoose.connect(process.env.MONGODB_URL)
 
-
+module.exports = connectDatabase
